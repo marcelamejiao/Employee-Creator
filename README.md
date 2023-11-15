@@ -1,5 +1,6 @@
 # Employee Creator 
 
+
 {add test badges here, all projects you build from here on out will have tests, therefore you should have github workflow badges at the top of your repositories: [Github Workflow Badges](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)}
 
 ## Demo & Snippets
@@ -53,7 +54,7 @@
 
 ## Change logs
 
--   Write a paragraph labelled with the date every day you work on the project to discuss what you've done for the say. Be specific about the changes that have happened for that day.
+-   15/11/2023 Implement React Hook Form to create a AddEmployeeForm component. Use a npm library to create a Date Picker to be used by the AddEmployeeForm.
 
 ### 13/02/2022 - {Theme of changes if applicable}
 
