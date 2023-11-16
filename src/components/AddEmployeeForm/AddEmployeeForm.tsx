@@ -1,5 +1,6 @@
-import { useForm, SubmitHandler } from "react-hook-form"
-import { DatePicker } from "../DatePicker/DatePicker"
+import { useForm, SubmitHandler } from "react-hook-form";
+import { DatePicker } from "../DatePicker/DatePicker";
+import styles from "./AddEmployeeForm.module.scss";
 
 interface IFormInput {
   firstName: string
@@ -20,8 +21,8 @@ export default function AddEmployeeForm() {
   const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data)
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div>
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <div className={styles.container}>
         <h2>Personal Information</h2>
         <label>First name</label>
         <input {...register("firstName", { required: true, maxLength: 20 })} />
@@ -30,7 +31,7 @@ export default function AddEmployeeForm() {
         <label>Last name</label>
         <input {...register("lastName", { required: true, maxLength: 20 })} />
       </div>
-      <div>
+      <div className={styles.container}>
         <h2>Contact details</h2>
         <label>Email address</label>
         <input {...register("emailAddress", { required: true})} />
@@ -39,7 +40,7 @@ export default function AddEmployeeForm() {
         <label>Residential address</label>
         <input {...register("address", { required: true})} />
       </div>
-      <div>
+      <div className={styles.container}>
         <h2>Employee status</h2>
         <p>What is contract type</p>
         <label>Permanent</label>
