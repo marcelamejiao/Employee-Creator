@@ -1,9 +1,9 @@
-export const getAllPosts = async () => {
+export const getAllEmployees = async () => {
     const response = await fetch("http://localhost:8080/posts");
     return await response.json();
 };
 
-export const createPost = async (data) => {
+export const createEmployee = async (data) => {
     const response = await fetch("http://localhost:8080/posts", {
         method: "POST",
         headers: {
@@ -13,16 +13,16 @@ export const createPost = async (data) => {
     });
 
     if (!response.ok) {
-        throw new Error("Could not create post");
+        throw new Error("Could not create an employee");
     }
 };
 
-export const deletePost = async (id) => {
+export const deleteEmployee = async (id) => {
     const response = await fetch(`http://localhost:8080/posts/${id}`, {
         method: "DELETE",
     });
 
     if (!response.ok) {
-        throw new Error("Could not delete");
+        throw new Error("Could not delete an employee");
     }
 };
