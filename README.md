@@ -55,6 +55,7 @@
 ## Change logs
 
 -   15/11/2023 Implement React Hook Form to create a AddEmployeeForm component. Use a npm library to create a Date Picker to be used by the AddEmployeeForm.
+-   16/11/2023 Implement React Router, Create services for the froonted: Get, Post and Delete, create a NavBar and basic style, implement basic styling for the Form, create a component for showing the list of employees(still in process) and being the main page.
 
 ### 13/02/2022 - {Theme of changes if applicable}
 
