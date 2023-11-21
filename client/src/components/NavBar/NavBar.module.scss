@@ -1,0 +1,28 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 2rem 1rem 0;
+  background-color: rgba(0, 0, 0, 0.624);
+  font-size: 1.3rem;
+  box-shadow: 0 3px 5px black;
+
+  &:hover {
+		border: none;
+		border-bottom: 3px solid rgba(0, 0, 255, 0.134);
+	}
+}
+
+.link {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.active_link {
+  text-decoration: underline;
+  &:visited {
+    color: white;
+  }
+}
