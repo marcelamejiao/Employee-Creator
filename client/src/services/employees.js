@@ -26,3 +26,18 @@ export const deleteEmployee = async (id) => {
         throw new Error("Could not delete an employee");
     }
 };
+
+export const updateEmployee = async (id, data) => {
+    const response =  await fetch(`http://localhost:8080/employees/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+        throw new Error("Could not update this employee");
+    }
+
+}

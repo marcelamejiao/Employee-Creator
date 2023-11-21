@@ -1,9 +1,20 @@
+import { updateEmployee } from "../../services/employees";
 import { deleteEmployee } from "../../services/employees";
+import styles from "./Employee.module.scss";
 
 const Employee = ({ employee, added, setAdded }) => {
 	const { firstName, lastName, contractType, emailAddress, id } = employee;
 
-	const handleClick = async () => {
+	const handleEdit = async () => {
+		try {
+				await updateEmployee(employee);
+				console.log("updated");
+		} catch (e) {
+				console.log(e.message);
+			}
+	};
+
+	const handleRemove = async () => {
 		try {
 				await deleteEmployee(id);
 				console.log("deleted");
@@ -14,12 +25,15 @@ const Employee = ({ employee, added, setAdded }) => {
 	};
 
 	return(
-		<div>
-			<h4>{firstName} {lastName}</h4>
-			<p>{contractType}</p>
-			<p>{emailAddress}</p>
-			<div>
-				<button onClick={handleClick}>Remove</button>
+		<div className={styles.container}>
+			<div className={styles.content}>
+				<h4 className={styles.fullname}>{firstName} {lastName}</h4>
+				<p>{contractType}</p>
+				<p>{emailAddress}</p>
+			</div>
+			<div className={styles.buttons}>
+				<button className={styles.button} onClick={handleEdit}>Edit</button>
+				<button className={styles.button} onClick={handleRemove}>Remove</button>
 			</div>
 		</div>
 	)

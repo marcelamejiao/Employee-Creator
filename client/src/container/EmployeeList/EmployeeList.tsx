@@ -1,12 +1,13 @@
 import Employee from "../../components/Employee/Employee";
+import styles from "./EmployeeList.module.scss";
 
 export default function EmployeeList({ employees, setAdded, added }) {
 	return (
 		<div>
-			<div>
+			<div className={styles.title}>
 				<h1>Employee's List</h1>
 			</div>
-			<div>
+			<div className={styles.content}>
 				{employees.length > 0 && 
 					employees.map((employee) => {
 						return (
