@@ -1,6 +1,6 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePicker } from "../DatePicker/DatePicker";
-import styles from "./AddEmployeeForm.module.scss";
+import styles from "./AddEmployeeFormPage.module.scss";
 import { createEmployee } from "../../services/employees";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ interface IFormInput {
   hoursPerWeek: number
 }
 
-export default function AddEmployeeForm({ added, setAdded }) {
+export default function AddEmployeeFormPage({ added, setAdded }) {
   const [error, setError] = useState(false);
   const { register, handleSubmit, setValue } = useForm<IFormInput>()
 

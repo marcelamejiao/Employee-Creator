@@ -1,4 +1,4 @@
-import AddEmployeeForm from "./components/AddEmployeeForm/AddEmployeeForm";
+import AddEmployeeFormPage from "./components/AddEmployeeFormPage/AddEmployeeFormPage";
 import EmployeeList from "../src/container/EmployeeList/EmployeeList";
 import Nav from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -33,7 +33,7 @@ function App() {
         <Route
           path="/add-employee"
           element={
-            <AddEmployeeForm
+            <AddEmployeeFormPage
                 setAdded={setAdded}
                 added={added}
             />
