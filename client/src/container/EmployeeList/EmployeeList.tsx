@@ -1,8 +1,23 @@
+import Employee from "../../components/Employee/Employee";
 
-export default function EmployeeList() {
+export default function EmployeeList({ employees, setAdded, added }) {
 	return (
 		<div>
-			<h2>Employee List Here</h2>
+			<h1>Employee's List</h1>
+			<div>
+				{employees.length > 0 && 
+					employees.map((employee) => {
+						return (
+							<Employee 
+								employee={employee}
+								key={employee.id}
+								added={added}
+								setAdded={setAdded}
+							/>
+						);
+					})
+				}
+			</div>
 		</div>
 	)
 } 
