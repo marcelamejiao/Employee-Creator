@@ -3,6 +3,11 @@ export const getAllEmployees = async () => {
     return await response.json();
 };
 
+export const getEmployeeById = async (id) => {
+    const response = await fetch(`http://localhost:8080/employees/${id}`);
+    return await response.json();
+};
+
 export const createEmployee = async (data) => {
     const response = await fetch("http://localhost:8080/employees", {
         method: "POST",
