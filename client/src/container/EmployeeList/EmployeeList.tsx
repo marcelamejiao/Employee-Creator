@@ -3,7 +3,9 @@ import Employee from "../../components/Employee/Employee";
 export default function EmployeeList({ employees, setAdded, added }) {
 	return (
 		<div>
-			<h1>Employee's List</h1>
+			<div>
+				<h1>Employee's List</h1>
+			</div>
 			<div>
 				{employees.length > 0 && 
 					employees.map((employee) => {

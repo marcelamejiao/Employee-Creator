@@ -10,8 +10,8 @@ const Employee = ({ employee, added, setAdded }) => {
 				setAdded(added + 1);
 		} catch (e) {
 				console.log(e.message);
-		}
-};
+			}
+	};
 
 	return(
 		<div>
