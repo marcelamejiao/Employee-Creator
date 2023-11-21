@@ -4,6 +4,7 @@ import Nav from "./components/NavBar/NavBar";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllEmployees } from "./services/employees";
+import EditEmployeePage from "./pages/EditEmployeePage/EditEmployeePage";
 
 function App() {
     const [employees, setEmployees] = useState([]);
@@ -37,6 +38,12 @@ function App() {
                 setAdded={setAdded}
                 added={added}
             />
+          }
+        />
+        <Route
+          path="/employees/:id"
+          element={
+            <EditEmployeePage />
           }
         />
       </Routes>

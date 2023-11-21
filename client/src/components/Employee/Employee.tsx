@@ -1,17 +1,14 @@
-import { updateEmployee } from "../../services/employees";
 import { deleteEmployee } from "../../services/employees";
 import styles from "./Employee.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const Employee = ({ employee, added, setAdded }) => {
 	const { firstName, lastName, contractType, emailAddress, id } = employee;
 
-	const handleEdit = async () => {
-		try {
-				await updateEmployee(employee);
-				console.log("updated");
-		} catch (e) {
-				console.log(e.message);
-			}
+	const navigate = useNavigate();
+
+	const handleEdit = () => {
+		navigate(`/employees/${id}`)
 	};
 
 	const handleRemove = async () => {
