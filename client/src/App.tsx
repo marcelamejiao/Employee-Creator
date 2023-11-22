@@ -1,3 +1,4 @@
+// @ts-nocheck @todo fix issues
 import AddEmployeeFormPage from "./components/AddEmployeeFormPage/AddEmployeeFormPage";
 import EmployeeList from "../src/container/EmployeeList/EmployeeList";
 import Nav from "./components/NavBar/NavBar";

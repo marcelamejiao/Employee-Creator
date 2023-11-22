@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      target: app
+    environment:
+      DATABASE_DSN: "jdbc:mysql://database:3306/employee-creator"
+    restart: on-failure
+    ports:
+      - "${APP_PORT:-8080}:80"
+    depends_on:
+      - database
+  database:
+    image: mysql:8
+    restart: on-failure
+    environment:
+      MYSQL_DATABASE: employee-creator
+      MYSQL_ROOT_PASSWORD: password
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-ppassword" ]
+      interval: 10s
+      retries: 10
+      timeout: 10s
