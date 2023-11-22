@@ -34,7 +34,7 @@ export const deleteEmployee = async (id) => {
 
 export const updateEmployee = async (id, data) => {
     const response =  await fetch(`http://localhost:8080/employees/${id}`, {
-        method: "PUT",
+        method: "PATCH",
         headers: {
             "Content-Type": "application/json",
         },

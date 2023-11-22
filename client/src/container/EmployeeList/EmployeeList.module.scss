@@ -1,17 +1,21 @@
 .title {
-    padding: 5rem;
-    background-color:rgba(211, 211, 213, 0.115);
-    color: rgba(20, 20, 22, 0.937);
-    text-align: center;
+    padding: 3rem;
+    background-color: rgba(128, 128, 128, 0.056);
+    color:rgba(22, 22, 236, 0.78);
     margin: 1rem 7rem 2rem 7rem;
     letter-spacing: 0.1em;
-    box-shadow: 0 3px 5px rgba(211, 211, 213, 0.551);
-    font-size: large;
+    box-shadow: 0 3px 5px rgba(211, 211, 213, 0.72);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 3px  white;
+    border-radius: 0.2rem;
 }
 
 .content {
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding: 1rem 10rem 1rem 10rem;
     justify-content: center;
     align-items: center;
+    margin: 1rem 7rem 2rem 7rem;
+    box-shadow: 0 3px 5px rgba(0, 0, 255, 0.134);
+    background-color: rgba(128, 128, 128, 0.008);
+    border-radius: 0.2rem;
 }

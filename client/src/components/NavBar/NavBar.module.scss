@@ -2,10 +2,10 @@
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  padding: 1rem 2rem 1rem 0;
-  background-color: rgba(0, 0, 0, 0.624);
+  padding: 1rem 7rem 1rem 0;
+  background-color: rgba(128, 128, 128, 0.008);
   font-size: 1.3rem;
-  box-shadow: 0 3px 5px rgba(211, 211, 213, 0.551);
+  box-shadow: 1px 3px 5px rgb(211, 211, 213);
 
   &:hover {
 		border: none;
@@ -14,15 +14,15 @@
 }
 
 .link {
-  color: white;
+  color: black;
   &:hover {
-    color: white;
+    color: black;
   }
 }
 
 .active_link {
   text-decoration: underline;
   &:visited {
-    color: white;
+    color: black;
   }
 }
