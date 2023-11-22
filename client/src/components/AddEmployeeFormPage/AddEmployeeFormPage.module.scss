@@ -8,11 +8,74 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border: 0.1rem solid whitesmoke;
-    border-radius: 0.5rem 0 0.5rem 0;
+    background-color: rgba(128, 128, 128, 0.008);
+    border-radius: 0.2rem;
     width: 80%;
     gap: 1rem;
     box-shadow: 0 3px 5px rgba(0, 0, 255, 0.134);
-    margin: 1rem;
+    margin: 1rem 7rem 2rem 7rem;
+    padding: 1rem 10rem 1rem 10rem;
+    font-size: 1.2rem;
+}
+
+.title {
+    color:rgba(22, 22, 236, 0.78);
     padding: 1rem;
+}
+
+input {
+    border-radius: 0.5rem;
+    border: 2px solid gray;
+    width: 50%;
+    padding: 1rem;
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.037);
+        border: 2px solid rgb(0, 0, 0);
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: start;
+    padding: 2rem;
+    gap: 1rem;
+    border-bottom: 2px solid rgba(0, 0, 255, 0.134);
+}   
+
+.smallInput {
+    width: 20%;
+}
+
+.radioContainer {
+    display: flex;
+    justify-content:flex-start;
+    gap: 1rem;
+}
+
+.inputRadio {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+.button {
+	padding: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	width: 8rem;
+	font-size: 1.5rem;
+
+	&:hover {
+		border: 1px solid rgba(0, 0, 255, 0.134);
+		border-radius: 0.5rem;
+		box-shadow: 0 3px 5px rgba(211, 211, 213, 0.551);
+		background-color: rgba(128, 128, 128, 0.666);
+		color: white;
+		text-shadow: 0.5px 0.5px 1px  black;
+		cursor:pointer;
+	}
 }
