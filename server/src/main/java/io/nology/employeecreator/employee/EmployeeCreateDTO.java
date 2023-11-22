@@ -1,14 +1,11 @@
 package io.nology.employeecreator.employee;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.time.OffsetDateTime;
-import java.util.Date;
 
 public class EmployeeCreateDTO {
 

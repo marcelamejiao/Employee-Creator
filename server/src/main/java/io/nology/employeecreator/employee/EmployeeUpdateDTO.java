@@ -1,11 +1,11 @@
 package io.nology.employeecreator.employee;
 
-import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.text.ParseException;
+import java.time.OffsetDateTime;
 
 public class EmployeeUpdateDTO {
 
@@ -14,7 +14,6 @@ public class EmployeeUpdateDTO {
 	@NotBlank
 	private String firstName;
 
-	@Column
 	@Getter
 	@Setter
 	@NotBlank
@@ -31,7 +30,6 @@ public class EmployeeUpdateDTO {
 
 	@Getter
 	@Setter
-	@NotBlank
 	private Long mobileNumber;
 
 	@Getter
@@ -46,13 +44,11 @@ public class EmployeeUpdateDTO {
 
 	@Getter
 	@Setter
-	@NotBlank
-	private Date startDate;
+	private OffsetDateTime startDate;
 
 	@Getter
 	@Setter
-	@NotBlank
-	private Date finishDate;
+	private OffsetDateTime finishDate;
 
 	@Getter
 	@Setter
@@ -61,8 +57,7 @@ public class EmployeeUpdateDTO {
 
 	@Getter
 	@Setter
-	@NotBlank
-	private Byte hoursPerWeek;
+	private Long hoursPerWeek;
 
 
 	public EmployeeUpdateDTO(String firstName,
@@ -72,10 +67,10 @@ public class EmployeeUpdateDTO {
 							 Long mobileNumber,
 							 String address,
 							 String contractType,
-							 Date startDate,
-							 Date finishDate,
+							 String startDate,
+							 String finishDate,
 							 String contractBasis,
-							 Byte hoursPerWeek) {
+							 Long hoursPerWeek) throws ParseException {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.middleName = middleName;
@@ -83,8 +78,8 @@ public class EmployeeUpdateDTO {
 		this.mobileNumber = mobileNumber;
 		this.address = address;
 		this.contractType = contractType;
-		this.startDate = startDate;
-		this.finishDate = finishDate;
+		this.startDate = OffsetDateTime.parse(startDate);
+		this.finishDate = OffsetDateTime.parse(finishDate);
 		this.contractBasis = contractBasis;
 		this.hoursPerWeek = hoursPerWeek;
 	}
