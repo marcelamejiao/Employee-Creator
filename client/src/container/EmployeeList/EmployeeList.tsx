@@ -6,7 +6,7 @@ export default function EmployeeList({ employees, setAdded, added }) {
 	return (
 		<div>
 			<div className={styles.title}>
-				<h1>Employee's List</h1>
+				<h1>Employee List</h1>
 			</div>
 			<div className={styles.content}>
 				{employees.length > 0 && 
