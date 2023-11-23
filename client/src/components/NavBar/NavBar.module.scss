@@ -1,3 +1,5 @@
+@use '../../partials/mixins.scss';
+
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -24,5 +26,13 @@
   text-decoration: underline;
   &:visited {
     color: black;
+  }
+}
+
+@include mixins.phone {
+  .nav {
+    justify-content: space-around;
+    padding: 0.8rem;
+    font-size: 1rem;
   }
 }

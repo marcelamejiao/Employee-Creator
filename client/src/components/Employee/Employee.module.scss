@@ -1,3 +1,5 @@
+@use '../../partials/mixins.scss';
+
 .container {
 	padding: 3rem;
 	border-top: 1px solid rgba(0, 0, 255, 0.212);
@@ -15,7 +17,7 @@
 
 .content {
 	width: 70%;
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 }
 
 .fullname {
@@ -25,9 +27,9 @@
 
 .buttons{
 	display: flex;
-	width: 30%;
 	align-items: center;
 	justify-content: space-around;
+	gap: 1rem;
 }
 
 .button {
@@ -35,7 +37,7 @@
 	border: none;
 	border-radius: 0.5rem;
 	width: 8rem;
-	font-size: 1.5rem;
+	font-size: 1.1rem;
 
 	&:hover {
 		border: 1px solid rgba(0, 0, 255, 0.134);
@@ -46,4 +48,16 @@
 		text-shadow: 0.5px 0.5px 1px  black;
 		cursor: pointer;
 	}
+}
+
+@include mixins.phone {
+	@include mixins.employee-mobiles
+}
+
+@include mixins.tablet {
+	@include mixins.employee-mobiles
+}
+
+@include mixins.small-desktop {
+	@include mixins.employee-mobiles
 }

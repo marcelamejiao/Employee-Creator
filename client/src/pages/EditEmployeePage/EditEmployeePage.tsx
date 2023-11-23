@@ -55,48 +55,100 @@ const EditEmployeePage = () => {
 
 
 	return (
-		<div>
-			<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-      <div className={styles.container}>
-        <h2>Personal Information</h2>
-        <label>First name</label>
-        <input {...register("firstName", { required: true, maxLength: 20 })} />
-        <label>Middle name(if applicable)</label>
-        <input {...register("middleName")} />
-        <label>Last name</label>
-        <input {...register("lastName", { required: true, maxLength: 20 })} />
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+    <div className={styles.container}>
+      <h2 className={styles.title}>Personal Information</h2>
+      <label>First name</label>
+      <input 
+        {...register("firstName", 
+        { required: true, maxLength: 20 })} 
+      />
+      <label>Middle name(if applicable)</label>
+      <input 
+        {...register("middleName")} 
+      />
+      <label>Last name</label>
+      <input 
+        {...register("lastName", 
+        { required: true, maxLength: 20 })} 
+      />
+    </div>
+
+    <div className={styles.container}>
+      <h2 className={styles.title}>Contact details</h2>
+      <label>Email address</label>
+      <input 
+        {...register("emailAddress", 
+        { required: true})} 
+      />
+      <label>Mobile Number</label>
+      <input 
+        type="tel" 
+        {...register("mobileNumber", 
+        { required: true})} 
+      />  
+      <label>Residential address</label>
+      <input 
+        {...register("address", 
+        { required: true})} 
+      />
+    </div>
+
+    <div className={styles.container}>
+      <h2 className={styles.title}>Employee status</h2>
+
+      <div className={styles.box}>
+      <h3>What is the contract type?</h3>
+        <div className={styles.radioContainer}>
+          <input
+            className={styles.inputRadio} 
+            type="radio" 
+            value="permanent" 
+            {...register("contractType")} 
+          />
+          <label>Permanent</label>
+        </div>
+        <div className={styles.radioContainer}>
+          <input 
+            className={styles.inputRadio} 
+            type="radio"value="contract" 
+            {...register("contractType")} 
+          />
+          <label>Contract</label>
+        </div>
       </div>
-      <div className={styles.container}>
-        <h2>Contact details</h2>
-        <label>Email address</label>
-        <input {...register("emailAddress", { required: true})} />
-        <label>Mobile Number</label>
-        <input type="number" {...register("mobileNumber", { required: true})} />  
-        <label>Residential address</label>
-        <input {...register("address", { required: true})} />
+
+      <div className={styles.box}>
+        <h3>Start date</h3>
+        <DatePicker 
+          onChange={(newValue: Date) => {
+            setValue("startDate", newValue)}
+          } 
+        />
+        <h3>Finish date</h3>
+        <DatePicker 
+          onChange={(newValue: Date) => {
+            setValue("finishDate", newValue)}
+          } 
+        />
       </div>
-      <div className={styles.container}>
-        <h2>Employee status</h2>
-        <p>What is contract type</p>
-        <label>Permanent</label>
-        <input type="radio" value="permanent" {...register("contractType")} />
-        <label>Contract</label>
-        <input type="radio"value="contract" {...register("contractType")} />
-        <p>Start date</p>
-        <DatePicker onChange={(newValue: Date) => {setValue("startDate", newValue)}} />
-        <p>Finish date</p>
-        <DatePicker onChange={(newValue: Date) => {setValue("finishDate", newValue)}} />
-        <p>Is this on a full-time or part time basis?</p>
-        <label>Full-time</label>
-        <input type="radio" value="fullTime" {...register("contractBasis")} />
-        <label>Part-time</label>
-        <input type="radio"value="partTime" {...register("contractBasis")} />
-        <label>Hours per week</label>
-        <input {...register("hoursPerWeek", { required: true})} />
+
+      <div className={styles.box}>
+        <h3>Is this on a full-time or part time basis?</h3>
+        <div className={styles.radioContainer}>
+          <input className={styles.inputRadio} type="radio" value="fullTime" {...register("contractBasis")} />
+          <label>Fulltime</label>
+        </div>
+        <div className={styles.radioContainer}>
+          <input className={styles.inputRadio} type="radio"value="partTime" {...register("contractBasis")} />
+          <label>Parttime</label>
+        </div>
       </div>
-      <input type="submit" value="Save" />
-    </form>
-		</div>
+      <label>Hours per week</label>
+      <input className={styles.smallInput} {...register("hoursPerWeek", { required: true})} />
+      <input className={styles.button} type="submit" value="Save" />
+    </div>
+  </form>
 	)
 }
 

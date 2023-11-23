@@ -1,0 +1,7 @@
+@use '../../partials/mixins.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}

@@ -1,3 +1,5 @@
+@use '../../partials/mixins.scss';
+
 .form {
     display: flex;
     flex-direction: column;
@@ -17,7 +19,7 @@
     box-shadow: 0 3px 5px rgba(0, 0, 255, 0.134);
     margin: 1rem 7rem 2rem 7rem;
     padding: 1rem 10rem 1rem 10rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .title {
@@ -67,7 +69,7 @@ input {
 	border: none;
 	border-radius: 0.5rem;
 	width: 8rem;
-	font-size: 1.5rem;
+	font-size: 1rem;
 
 	&:hover {
 		border: 1px solid rgba(0, 0, 255, 0.134);
@@ -78,4 +80,12 @@ input {
 		text-shadow: 0.5px 0.5px 1px  black;
 		cursor:pointer;
 	}
+}
+
+@include mixins.phone {
+    @include mixins.form-mobile
+}
+
+@include mixins.tablet {
+    @include mixins.form-mobile
 }
