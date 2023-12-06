@@ -1,83 +1,78 @@
 # Employee Creator 
 
+## **Table of Contents** 
+
+  - [**Table of Contents**](#table-of-contents)
+  - [**Description**](#description)
+  - [**My experience**](#my-experience)
+  - [**Usage**](#usage)
+  - [**Technologies Used**](#technologies-used)
+  - [**Preview**](#preview)
+  - [**Deployed link**](#deployed-link)
+  - [**Future Development**](#future-development)
+  - [**Questions**](#questions)
+
+
+## **Description**
+
+This project was designed to create a web application where employees can be added to a database, a list of employees is displayed as a home page, where you can modify and delete employees. 
+
+To create employees a form need to be complete it, also if there is any information about an employee that needs to be change, the user can modify it by pressing the "modify" button or delete an employee from the database by pressing the "delete" button. 
+
+This application consists of a spring RESTful API and a React Typescript frontend.
+
+## **My experience**
+
+I found this project a great opportunity to create a full-stack application, where I could for the first time develop a frontend with Typescript and a backend service with Spring.
+
+Writing code with TS was challenging as since I started coding I used JS and I feel very confortable with it, however it was good to get out of the confort zone and bring a new skill to the table. 
+
+
+## **Usage**
+To start the frontend using the terminal inside the client folder:
+
+```
+npm run dev 
+```
+
+To initialise the backend:
+```
+Using Eclipse, IntelliJ or a bash terminal/console, run/execute the Main class. 
+```
+
+
+## **Technologies Used**
+
+* Java
+* Spring
+* React
+* Typescript
+* SCSS
+* HTML
+* Spring boot unit test
+
+## **Preview**
+
+* **Employee List**
+
+![employee-list](./assets/img/employee-list.png)
+
+* **Create an employee**
+
+![add-employee](./assets/img/add-employee.png)
+
+## **Deployed link**
+
+To send live this application [Ruben](https://github.com/arg2009) help me out with the deployment on his server.
+
 💡 Live version: [click here!](https://employee-creator.rubencito.net/)
 
-{add test badges here, all projects you build from here on out will have tests, therefore you should have github workflow badges at the top of your repositories: [Github Workflow Badges](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge)}
+## **Future Development**
 
-## Demo & Snippets
+* Create a logging page.
+* Testing the frontend.
+* Implement Axios over Fetch.
 
--   Include images of app if CLI or Client App
+## **Questions**
 
----
-
-## Requirements / Purpose
-
--   MVP
--   purpose of project
--   stack used and why
-
----
-
-## Build Steps
-
--   how to build / run project
--   use proper code snippets if there are any commands to run
-
----
-
-## Design Goals / Approach
-
--   Design goals
--   why did you implement this the way you did?
-
----
-
-## Features
-
--   What features does the project have?
--   list them...
-
----
-
-## Known issues
-
--   Remaining bugs, things that have been left unfixed
--   Features that are buggy / flimsy
-
----
-
-## Future Goals
-
--   What are the immediate features you'd add given more time
-
----
-
-## Change logs
-
--   15/11/2023 Implement React Hook Form to create a AddEmployeeForm component. Use a npm library to create a Date Picker to be used by the AddEmployeeForm.
-- 16/11/2023 Implement React Router inside the App component, Create services for the frontend: Get, Post and Delete, create a NavBar and its basic style, implement basic styling for the Form component, create the EmployeeList component for showing the list of employees in the main page and add resets for styling inside the Main component.
-
-### 13/02/2022 - {Theme of changes if applicable}
-
--   Extended the expiry time of JWT tokens on the backend
--   Added users to cohort response payload
--   Centralized API base URL on frontend using the proxy `package.json` property
-
----
-
-## What did you struggle with?
-
--   What? Why? How?
-
----
-
-## Licensing Details
-
--   What type of license are you releasing this under?
-
----
-
-## Further details, related projects, reimplementations
-
--   Is this project a reimplementation for something you've done in the past? if so explain it and link it here.
--   If it's an API, is there a client app that works with this project? link it
+* Contact me on my GitHub profile: [Marcela's GitHub](https://github.com/marcelamejiao)
