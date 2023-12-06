@@ -61,6 +61,16 @@ Using Eclipse, IntelliJ or a bash terminal/console, run/execute the Main class.
 
 ![add-employee](./assets/img/add-employee.png)
 
+* **Toastify notification when when adding an employee**
+
+![add-employee-toast](./assets/img/toastify-add-employee.png)
+
+* **Toastify notification when when updating an employee**
+
+![add-employee-toast](./assets/img/toastify-update-employee.png)
+
+
+
 ## **Deployed link**
 
 To send live this application [Ruben](https://github.com/arg2009) help me out with the deployment on his server.
