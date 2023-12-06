@@ -69,7 +69,10 @@ To send live this application [Ruben](https://github.com/arg2009) help me out wi
 
 ## **Future Development**
 
-* Create a logging page.
+* Implement authentication.
+  * Create login page.
+  * Implement spring basic authentication (security). 
+* Implement an API logging strategy.
 * Testing the frontend.
 * Implement Axios over Fetch.
 
