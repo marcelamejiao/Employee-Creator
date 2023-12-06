@@ -44,7 +44,10 @@ function App() {
         <Route
           path="/employees/:id"
           element={
-            <EditEmployeePage />
+            <EditEmployeePage 
+              setAdded={setAdded}
+              added={added}
+            />
           }
         />
       </Routes>

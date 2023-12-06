@@ -21,7 +21,7 @@ interface IFormInput {
   hoursPerWeek: number
 }
 
-const EditEmployeePage = () => {
+const EditEmployeePage = ({ added, setAdded }) => {
 	// const [employee, setEmployee] = useState({})
 	let { id } = useParams();
 
@@ -47,6 +47,7 @@ const EditEmployeePage = () => {
             setError(false);
         }
         await updateEmployee(id, data);
+        setAdded(added + 1);
         navigate("/");
     } catch (e) {
         setError(true);
