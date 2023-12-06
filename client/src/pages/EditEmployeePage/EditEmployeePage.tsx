@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePicker } from "../../components/DatePicker/DatePicker";
 import styles from "../../components/AddEmployeeFormPage/AddEmployeeFormPage.module.scss";
-
+import { toast } from 'react-toastify';
 
 interface IFormInput {
   firstName: string
@@ -52,6 +52,8 @@ const EditEmployeePage = ({ added, setAdded }) => {
     } catch (e) {
         setError(true);
     }
+
+    toast.info("You have successfully edited an employee!");
   };
 
 

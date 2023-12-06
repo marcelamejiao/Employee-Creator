@@ -5,6 +5,8 @@ import styles from "./AddEmployeeFormPage.module.scss";
 import { createEmployee } from "../../services/employees";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
+
 
 interface IFormInput {
   firstName: string
@@ -37,6 +39,8 @@ export default function AddEmployeeFormPage({ added, setAdded }) {
     } catch (e) {
         setError(true);
     }
+
+    toast.info("You have successfully added a new employee to the list!");
   };
 
   return (

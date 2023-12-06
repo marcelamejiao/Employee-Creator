@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllEmployees } from "./services/employees";
 import EditEmployeePage from "./pages/EditEmployeePage/EditEmployeePage";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
     const [employees, setEmployees] = useState([]);
@@ -51,7 +53,9 @@ function App() {
           }
         />
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
+    
   )
 }
 
