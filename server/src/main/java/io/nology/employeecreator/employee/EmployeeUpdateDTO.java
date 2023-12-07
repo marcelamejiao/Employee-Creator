@@ -30,7 +30,7 @@ public class EmployeeUpdateDTO {
 
 	@Getter
 	@Setter
-	private Long mobileNumber;
+	private int mobileNumber;
 
 	@Getter
 	@Setter
@@ -57,20 +57,20 @@ public class EmployeeUpdateDTO {
 
 	@Getter
 	@Setter
-	private Long hoursPerWeek;
+	private int hoursPerWeek;
 
 
 	public EmployeeUpdateDTO(String firstName,
 							 String lastName,
 							 String middleName,
 							 String emailAddress,
-							 Long mobileNumber,
+							 int mobileNumber,
 							 String address,
 							 String contractType,
 							 String startDate,
 							 String finishDate,
 							 String contractBasis,
-							 Long hoursPerWeek) throws ParseException {
+							 int hoursPerWeek) throws ParseException {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.middleName = middleName;
