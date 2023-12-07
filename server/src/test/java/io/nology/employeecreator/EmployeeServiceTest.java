@@ -10,7 +10,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
 import java.text.ParseException;
 import java.time.OffsetDateTime;
+import java.util.Optional;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @ExtendWith(MockitoExtension.class)
 public class EmployeeServiceTest {
@@ -76,4 +79,44 @@ public class EmployeeServiceTest {
         // check if what save was called with is the same as my employee
         assertEquals(employee, employeeArgument.getValue());
     }
+
+    @Test
+    void deleteById_ExistingId_ReturnsTrue() {
+
+        Long id = 24l;
+
+        Employee employee = new Employee (
+                "Marcela",
+                "Mejia",
+                "Wendy",
+                "mejia@test.com",
+                450340769,
+                "17 some street",
+                "permanent",
+                OffsetDateTime.parse("2021-01-01T00:00:00+00:00"),
+                OffsetDateTime.parse("2021-01-01T00:00:00+00:00"),
+                "fulltime",
+                32
+        );
+
+        // Saying that the employee exits
+        BDDMockito.given(employeeRepository.findById(id)).willReturn(Optional.of(employee));
+
+        Boolean deleted = this.underTest.deleteById(id);
+
+        //check that the repository method was called with the correct argument
+        ArgumentCaptor<Employee> employeeArgument = ArgumentCaptor.forClass(Employee.class);
+        Mockito.verify(employeeRepository).delete(employeeArgument.capture());
+
+        // check that deleted == true
+        assertTrue(deleted);
+        // check if what save was called with is the same as my employee
+        assertEquals(employee, employeeArgument.getValue());
+
+    }
+
+
+
+
+
 }
