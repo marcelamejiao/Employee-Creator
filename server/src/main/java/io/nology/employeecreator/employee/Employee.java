@@ -14,70 +14,60 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "employees")
+@Getter
+@Setter
 public class Employee {
 	
 	// here we will put everything we want to store in the db
 	// for each employee
-	
-	@Getter
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	@Column
-	@Getter
-	@Setter
+
 	private String firstName;
 	
 	@Column
-	@Getter
-	@Setter
+
 	private String lastName;
 	
 	@Column
-	@Getter
-	@Setter
+
 	private String middleName;
 
 	@Column
-	@Getter
-	@Setter
+
 	private String emailAddress;
 
 	@Column
-	@Getter
-	@Setter
-	private Long mobileNumber;
+
+	private int mobileNumber;
 
 	@Column
-	@Getter
-	@Setter
+
 	private String address;
 
 	@Column
-	@Getter
-	@Setter
+
 	private String contractType;
 
 	@Column
-	@Getter
-	@Setter
+
 	private OffsetDateTime startDate;
 
 	@Column
-	@Getter
-	@Setter
+
 	private OffsetDateTime finishDate;
 
 	@Column
-	@Getter
-	@Setter
+
 	private String contractBasis;
 
 	@Column
-	@Getter
-	@Setter
-	private Long hoursPerWeek;
+
+	private int hoursPerWeek;
 
 	public Employee() {}
 	
@@ -85,13 +75,13 @@ public class Employee {
 					String lastName,
 					String middleName,
 					String emailAddress,
-					Long mobileNumber,
+					int mobileNumber,
 					String address,
 					String contractType,
 					OffsetDateTime startDate,
 					OffsetDateTime finishDate,
 					String contractBasis,
-					Long hoursPerWeek) {
+					int hoursPerWeek) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.middleName = middleName;
