@@ -45,7 +45,7 @@ public class EmployeeServiceTest {
                 "17 some street",
                 "permanent",
                 "2013-04-10T14:00:00.000Z",
-                "J2013-04-10T14:00:00.000Z",
+                "2013-04-10T14:00:00.000Z",
                 "fulltime",
                 32
         );
