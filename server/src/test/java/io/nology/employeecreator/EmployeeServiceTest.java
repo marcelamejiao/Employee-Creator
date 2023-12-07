@@ -8,10 +8,8 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.modelmapper.ModelMapper;
-
 import java.text.ParseException;
 import java.time.OffsetDateTime;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
@@ -77,6 +75,5 @@ public class EmployeeServiceTest {
 
         // check if what save was called with is the same as my employee
         assertEquals(employee, employeeArgument.getValue());
-
     }
 }

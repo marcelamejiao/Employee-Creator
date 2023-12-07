@@ -26,48 +26,37 @@ public class Employee {
 	private Long id;
 	
 	@Column
-
 	private String firstName;
 	
 	@Column
-
 	private String lastName;
 	
 	@Column
-
 	private String middleName;
 
 	@Column
-
 	private String emailAddress;
 
 	@Column
-
 	private int mobileNumber;
 
 	@Column
-
 	private String address;
 
 	@Column
-
 	private String contractType;
 
 	@Column
-
 	private OffsetDateTime startDate;
 
 	@Column
-
 	private OffsetDateTime finishDate;
 
 	@Column
-
 	private String contractBasis;
 
 	@Column
-
-	private int hoursPerWeek;
+	private float hoursPerWeek;
 
 	public Employee() {}
 	
@@ -81,7 +70,7 @@ public class Employee {
 					OffsetDateTime startDate,
 					OffsetDateTime finishDate,
 					String contractBasis,
-					int hoursPerWeek) {
+					float hoursPerWeek) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.middleName = middleName;
