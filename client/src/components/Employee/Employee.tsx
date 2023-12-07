@@ -1,9 +1,13 @@
 // @ts-nocheck @todo fix issues
 import { deleteEmployee } from "../../services/employees";
+import { ConfirmModal } from "../ConfirmModal/ConfirmModal";
 import styles from "./Employee.module.scss";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Employee = ({ employee, added, setAdded }) => {
+	const [showModal, setShowModal] = useState(false);
+
 	const { firstName, lastName, contractType, emailAddress, id } = employee;
 
 	const navigate = useNavigate();
@@ -15,7 +19,6 @@ const Employee = ({ employee, added, setAdded }) => {
 	const handleRemove = async () => {
 		try {
 				await deleteEmployee(id);
-				console.log("deleted");
 				setAdded(added + 1);
 		} catch (e) {
 				console.log(e.message);
@@ -31,8 +34,15 @@ const Employee = ({ employee, added, setAdded }) => {
 			</div>
 			<div className={styles.buttons}>
 				<button className={styles.button} onClick={handleEdit}>Edit</button>
-				<button className={styles.button} onClick={handleRemove}>Remove</button>
+				<button className={styles.button} onClick={() => setShowModal(true)}>Remove</button>
 			</div>
+			{showModal && (			
+				<ConfirmModal 
+					handleRemove={handleRemove}
+					setShowModal={() => setShowModal(false)}
+				/>
+			)}
+
 		</div>
 	)
 }
