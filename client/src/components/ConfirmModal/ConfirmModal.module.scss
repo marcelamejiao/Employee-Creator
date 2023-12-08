@@ -1,13 +1,26 @@
 @use '../../partials/mixins.scss';
 
+.box {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.361);
+	position: fixed;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: hidden;
+}
+
 .container {
 	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	z-index: 2;
-	position: absolute;
+	text-align: center;
 	background-color: white;
 	color: black;
 	border: 1px solid rgba(0, 0, 255, 0.212);
@@ -18,9 +31,11 @@
 
 .actions {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	width: 100%;
 	padding: 2rem 0 0 0;
+	align-items: center;
+	gap: 1rem;
 }
 
 .buttons {
@@ -44,6 +59,13 @@
 @include mixins.phone {
 	.container {
 		width: 100%;
+		font-size: 0.7rem;
+	}
+
+	.buttons {
+		width: 5rem;
+		font-size: 0.6rem;
+		padding: 0.6rem;
 	}
 }
 
