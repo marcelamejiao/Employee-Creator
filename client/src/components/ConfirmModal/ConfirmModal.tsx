@@ -3,6 +3,8 @@ import styles from "./ConfirmModal.module.scss"
 type confirmModalProps = {
 	handleRemove(): void,
 	setShowModal(): void,
+	firstName: string,
+	lastName: string,
 };
 
 export const ConfirmModal = ({ handleRemove, setShowModal, firstName, lastName}: confirmModalProps) => {
