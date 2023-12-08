@@ -61,17 +61,21 @@ Using Eclipse, IntelliJ or a bash terminal/console, run/execute the Main class.
 
 ![add-employee](./assets/img/add-employee.png)
 
-* **Toastify notification when when adding an employee**
+* **Toastify notification when adding an employee**
 
 ![add-employee-toast](./assets/img/toastify-add-employee.png)
 
-* **Toastify notification when when updating an employee**
+* **Toastify notification when updating an employee**
 
 ![add-employee-toast](./assets/img/toastify-update-employee.png)
 
 * **Confirm modal when deleting an employee**
 
 ![confirm-modal](./assets/img/confirm-modal.png)
+
+* **Toastify notification when deleting an employee**
+
+![toastify-delete](./assets/img/toastify-delete.png)
 
 ## **Deployed link**
 
