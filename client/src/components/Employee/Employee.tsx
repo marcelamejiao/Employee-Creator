@@ -21,12 +21,10 @@ const Employee = ({ employee, added, setAdded }) => {
 		try {
 				await deleteEmployee(id);
 				setAdded(added + 1);
-				toast.info("You have successfully deleted an employee");
+				toast.info(`You have successfully deleted the employee ${firstName} ${lastName}`);
 		} catch (e) {
 				console.log(e.message);
 			}
-
-			
 	};
 
 	return(
@@ -44,9 +42,10 @@ const Employee = ({ employee, added, setAdded }) => {
 				<ConfirmModal 
 					handleRemove={handleRemove}
 					setShowModal={() => setShowModal(false)}
+					firstName={firstName}
+					lastName={lastName}
 				/>
 			)}
-
 		</div>
 	)
 }

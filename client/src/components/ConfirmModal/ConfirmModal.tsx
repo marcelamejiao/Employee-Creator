@@ -5,12 +5,12 @@ type confirmModalProps = {
 	setShowModal(): void,
 };
 
-export const ConfirmModal = ({ handleRemove, setShowModal}: confirmModalProps) => {
+export const ConfirmModal = ({ handleRemove, setShowModal, firstName, lastName}: confirmModalProps) => {
 
 	return (
 		<div className={styles.box}>
 			<div className={styles.container}>
-				<h2>Are you sure you want to delete this employee?</h2>
+				<h2>Are you sure you want to delete the employee {firstName} {lastName}?</h2>
 				<div className={styles.actions}>
 					<button className={styles.buttons} onClick={handleRemove}>Yes</button>
 					<button className={styles.buttons} onClick={setShowModal}>Cancel</button>
