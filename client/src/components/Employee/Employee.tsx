@@ -4,6 +4,7 @@ import { ConfirmModal } from "../ConfirmModal/ConfirmModal";
 import styles from "./Employee.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { toast } from 'react-toastify';
 
 const Employee = ({ employee, added, setAdded }) => {
 	const [showModal, setShowModal] = useState(false);
@@ -20,9 +21,12 @@ const Employee = ({ employee, added, setAdded }) => {
 		try {
 				await deleteEmployee(id);
 				setAdded(added + 1);
+				toast.info("You have successfully deleted an employee");
 		} catch (e) {
 				console.log(e.message);
 			}
+
+			
 	};
 
 	return(
