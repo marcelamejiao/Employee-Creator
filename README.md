@@ -69,7 +69,9 @@ Using Eclipse, IntelliJ or a bash terminal/console, run/execute the Main class.
 
 ![add-employee-toast](./assets/img/toastify-update-employee.png)
 
+* **Confirm modal when deleting an employee**
 
+![confirm-modal](./assets/img/confirm-modal.png)
 
 ## **Deployed link**
 
