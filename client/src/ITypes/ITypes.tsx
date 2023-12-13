@@ -3,7 +3,7 @@ interface ITypes {
   lastName: string
   middleName: string
   emailAddress: string
-  mobileNumber: number
+  mobileNumber: string
   address: string
   contractType: string
   startDate: Date

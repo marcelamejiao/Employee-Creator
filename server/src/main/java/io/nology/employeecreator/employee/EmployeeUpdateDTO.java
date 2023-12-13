@@ -21,7 +21,7 @@ public class EmployeeUpdateDTO {
 	@NotBlank
 	private String emailAddress;
 
-	private int mobileNumber;
+	private String mobileNumber;
 
 	@NotBlank
 	private String address;
@@ -42,7 +42,7 @@ public class EmployeeUpdateDTO {
 							 String lastName,
 							 String middleName,
 							 String emailAddress,
-							 int mobileNumber,
+							 String mobileNumber,
 							 String address,
 							 String contractType,
 							 String startDate,

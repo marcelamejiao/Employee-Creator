@@ -38,7 +38,7 @@ public class Employee {
 	private String emailAddress;
 
 	@Column
-	private int mobileNumber;
+	private String mobileNumber;
 
 	@Column
 	private String address;
@@ -64,7 +64,7 @@ public class Employee {
 					String lastName,
 					String middleName,
 					String emailAddress,
-					int mobileNumber,
+					String mobileNumber,
 					String address,
 					String contractType,
 					OffsetDateTime startDate,
