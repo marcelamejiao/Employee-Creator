@@ -84,4 +84,14 @@
 	.box {
 		align-items: center;
 	}
+
+	.dateBox {
+		flex-direction: column;
+	}
+
+	.button {
+		padding: 0.6rem;
+		font-size: 0.8rem;
+		width: 4rem;
+	}
 }
