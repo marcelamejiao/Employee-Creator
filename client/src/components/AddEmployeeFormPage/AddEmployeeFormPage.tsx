@@ -1,4 +1,3 @@
-// @ts-nocheck @todo fix issues
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePicker } from "../DatePicker/DatePicker";
 import styles from "./AddEmployeeFormPage.module.scss";
@@ -6,28 +5,19 @@ import { createEmployee } from "../../services/employees";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
-
-
-interface IFormInput {
-  firstName: string
-  lastName: string
-  middleName: string
-  emailAddress: string // to improve
-  mobileNumber: number // to improve
-  address: string
-  contractType: string
-  startDate: Date
-  finishDate: Date
-  contractBasis: string
-  hoursPerWeek: number
-}
+import ITypes from "../../ITypes/ITypes";
 
 export default function AddEmployeeFormPage({ added, setAdded }) {
   const [error, setError] = useState(false);
-  const { register, handleSubmit, setValue, formState: { errors },} = useForm<IFormInput>()
+  const { 
+    register, 
+    handleSubmit, 
+    setValue, 
+    formState: { errors },
+  } = useForm<ITypes>()
 
   const navigate = useNavigate();
-  const onSubmit: SubmitHandler<IFormInput> = async (data, e) => {
+  const onSubmit: SubmitHandler<ITypes> = async (data, e) => {
     e.preventDefault();
     try {
         if (error) {

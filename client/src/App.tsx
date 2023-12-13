@@ -1,4 +1,3 @@
-// @ts-nocheck @todo fix issues
 import AddEmployeeFormPage from "./components/AddEmployeeFormPage/AddEmployeeFormPage";
 import EmployeeList from "../src/container/EmployeeList/EmployeeList";
 import Nav from "./components/NavBar/NavBar";
@@ -8,10 +7,11 @@ import { getAllEmployees } from "./services/employees";
 import EditEmployeePage from "./pages/EditEmployeePage/EditEmployeePage";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ITypes from "./ITypes/ITypes";
 
 function App() {
-    const [employees, setEmployees] = useState([]);
-    const [added, setAdded] = useState(0);
+    const [employees, setEmployees] = useState<Array<ITypes>>([]);
+    const [added, setAdded] = useState<number>(0);
 
     useEffect(() => {
         getAllEmployees().then((res) => {

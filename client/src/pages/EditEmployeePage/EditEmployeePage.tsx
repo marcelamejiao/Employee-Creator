@@ -1,33 +1,18 @@
 // @ts-nocheck @todo fix issues
 import { useNavigate, useParams } from "react-router-dom";
 import { getEmployeeById, updateEmployee } from "../../services/employees";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { DatePicker } from "../../components/DatePicker/DatePicker";
 import styles from "../../components/AddEmployeeFormPage/AddEmployeeFormPage.module.scss";
 import { toast } from 'react-toastify';
-
-interface IFormInput {
-  firstName: string
-  lastName: string
-  middleName: string
-  emailAddress: string // to improve
-  mobileNumber: number // to improve
-  address: string
-  contractType: string
-  startDate: Date
-  finishDate: Date
-  contractBasis: string
-  hoursPerWeek: number
-}
+import ITypes from "../../ITypes/ITypes";
 
 const EditEmployeePage = ({ added, setAdded }) => {
-	// const [employee, setEmployee] = useState({})
 	let { id } = useParams();
 
-
 	const [error, setError] = useState(false);
-  const { register, handleSubmit, setValue } = useForm<IFormInput>({
+  const { register, handleSubmit, setValue } = useForm<ITypes>({
 		defaultValues: async () => {
 			const employee = await getEmployeeById(id);
 
@@ -40,7 +25,7 @@ const EditEmployeePage = ({ added, setAdded }) => {
 	});
 
   const navigate = useNavigate();
-  const onSubmit: SubmitHandler<IFormInput> = async (data, e) => {
+  const onSubmit: SubmitHandler<ITypes> = async (data, e) => {
     e.preventDefault();
     try {
         if (error) {
@@ -55,7 +40,6 @@ const EditEmployeePage = ({ added, setAdded }) => {
 
     toast.info("You have successfully edited an employee!");
   };
-
 
 	return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
