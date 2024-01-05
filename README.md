@@ -81,7 +81,7 @@ Using Eclipse, IntelliJ or a bash terminal/console, run/execute the Main class.
 
 To send live this application [Ruben](https://github.com/arg2009) help me out with the deployment on the server.
 
-💡 Live version: [click here!](https://employee-creator.apps.marcelamejia.xyz/))
+💡 Live version: [click here!](https://employee-creator.apps.marcelamejia.xyz/)
 
 ## **Future Development**
 
