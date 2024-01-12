@@ -1,3 +1,5 @@
+FROM maven:3-eclipse-temurin-21 as base
+
 FROM node:18 as frontend-builder
 
 ARG VITE_API_HOST=/api
@@ -13,7 +15,7 @@ RUN npm ci \
 #    && npm run build \
     && npm run build:without-type-check
 
-FROM maven:3-eclipse-temurin-17-focal as java-builder
+FROM base as java-builder
 
 ADD server /server
 
@@ -25,7 +27,7 @@ RUN unset MAVEN_CONFIG \
 #    && ./mvnw clean package \
     && ./mvnw clean package -Dmaven.test.skip
 
-FROM maven:3-eclipse-temurin-21-focal as base
+FROM base as app
 
 # Install dependencies
 RUN apt-get update \
@@ -37,8 +39,6 @@ RUN apt-get update \
         apt-get clean
 
 WORKDIR /app
-
-FROM base as app
 
 # Add nginx configuration
 RUN rm /etc/nginx/sites-enabled/* /etc/nginx/sites-available/*
