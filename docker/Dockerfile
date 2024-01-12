@@ -25,7 +25,7 @@ RUN unset MAVEN_CONFIG \
 #    && ./mvnw clean package \
     && ./mvnw clean package -Dmaven.test.skip
 
-FROM maven:3-eclipse-temurin-17-focal as base
+FROM maven:3-eclipse-temurin-21-focal as base
 
 # Install dependencies
 RUN apt-get update \
